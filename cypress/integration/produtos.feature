@@ -1,5 +1,6 @@
 Feature: Produtos
-    Scenario: Verify if the product was added correctly
-        Given I access the product page
-        When  I add a product in the cart
-        Then  In the cart I must see the product
+  
+  Cenário: Verifique se o produto foi adicionado corretamente
+        Dado eu acessar a página do produto
+        Quando adiciono um produto ao carrinho
+        Então no carrinho devo ver o produto
