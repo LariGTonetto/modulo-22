@@ -1,7 +1,7 @@
 /// <reference types="cypress" />
 
 import { addProduct } from '../support/commands'
-import { Given, When, Then } from 'cypress-cucumber-preprocessor/steps'
+import { Dado, Quando, Então } from 'cypress-cucumber-preprocessor/steps'
 const { carrinhoPage } = require('../../support/page_objects')
 const dados = require('../fixtures/prodIntercept.json')
 const dadosProdutos = require('../fixtures/prodRequest.json')
@@ -20,12 +20,12 @@ beforeEach(() => {
   })
 
 
-Given('I have added a product in the cart', () => {
+Dado('Eu adicione um produto no carrinho', () => {
     cy.addProduct(dadosProdutos.size, dadosProdutos.color, dadosProdutos.quantity,
         dadosProdutos.add_cart, dadosProdutos.product_id, dadosProdutos.variation_id)
 })
 
-When('I change the quantity of the product in the cart', () =>{
+Quando('Eu altero a quantidade do produto no carrinho', () =>{
    cy.intercept({
         url: '/carrinho*',
         method: 'GET',                 
@@ -53,7 +53,7 @@ When('I change the quantity of the product in the cart', () =>{
     carrinhoPage.addProduto()
 })
 
-When('I remove the product in the cart', () =>{
+Quando('Eu removo o produto do carrinho', () =>{
     cy.intercept({
          url: '/carrinho*',
          method: 'GET',                 
@@ -79,10 +79,10 @@ When('I remove the product in the cart', () =>{
      carrinhoPage.addProduto()
  })
 
-Then('I must see the product updated correctly', () =>{
+Então('Devo ver o produto atualizado corretamente', () =>{
     carrinhoPage.Total.should('contain', 'R$276,00')
 })
 
-Then('I must see the product removed correctly', () =>{
+Então('Devo ver o produto removido corretamente', () =>{
     carrinhoPage.carrinhoVazio.should('contain', 'Seu carrinho está vazio')
 })
