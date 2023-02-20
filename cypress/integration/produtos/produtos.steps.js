@@ -1,6 +1,6 @@
 /// <reference types="cypress" />
 
-import { Given, When, Then } from 'cypress-cucumber-preprocessor/steps'
+import { Dado, Quando, Então } from 'cypress-cucumber-preprocessor/steps'
 const { produtosPage } = require('../../support/page_objects')
 const dados = require('../fixtures/prodIntercept.json')
 const produtos = require('../fixtures/produtos.json')
@@ -13,11 +13,11 @@ beforeEach(() => {
     cy.visit("/")
   })
 
-Given('I access the product page', () => {
+Dado('Eu acesse a página de produtos', () => {
     cy.visit('/produtos')
 })
 
-When('I add a product in the cart', () => {
+Quando('Eu adiciono produto no carrinho', () => {
     
     cy.intercept({
         url: '/wp-admin/admin-ajax*',
@@ -57,7 +57,7 @@ When('I add a product in the cart', () => {
         produtos[1].cor, produtos[1].quantidade)
 })
 
-Then('In the cart I must see the product', () => {
+Então('No carrinho devo ver o produto', () => {
     produtosPage.clicarPreviewCarrinho()
     produtosPage.PreviewCarrinho.should('contain', 'Abominable Hoodie - XS, Green')
 })
