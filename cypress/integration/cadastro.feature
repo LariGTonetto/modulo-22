@@ -1,6 +1,7 @@
 Feature: Minha Conta
-    Scenario: Register New Account
-        Given I access the my account page
-        When  I register in with email "<email>" and senha "<senha>"       
-        And   I click to complete the adress details
-        Then  I should see a message of success
+ 
+ Cenário: registrar nova conta
+        Dado eu acessar a página minha conta
+        Ao me cadastrar com o e-mail "<email>" e senha "<senha>"
+        E eu clico para completar os detalhes do endereço
+        Então eu deveria ver uma mensagem de sucesso
