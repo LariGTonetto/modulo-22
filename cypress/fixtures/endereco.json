@@ -1,13 +1,13 @@
 {
-  "nome": "Bertram",
-  "sobrenome": "Gilfoyle",
-  "empresa": "Pied Piper",
+  "nome": "Felipe",
+  "sobrenome": "Lodes",
+  "empresa": "Teste de vida",
   "pais": "Brasil",
-  "endereco": "Avenida Afonso Pena",
-  "numero": "1500",
-  "cidade": "Belo Horizonte",
-  "estado": "Minas Gerais",
-  "cep": "30464910",
-  "telefone": "31987654321",
-  "email": "bgilfoyle@piedpiper.com"
+  "endereco": "Rua Coelho de Carvalho",
+  "numero": "175",
+  "cidade": "São Paulo",
+  "estado": "São Paulo",
+  "cep": "05468020",
+  "telefone": "1130222082",
+  "email": "felipe.lodes@teste.com"
 }
