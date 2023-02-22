@@ -1,7 +1,7 @@
 {
-  "name": "sample-cy-page-objects",
+  "name": "modulo-22",
   "version": "1.0.0",
-  "description": "Exemplos de organização de testes utilizando PageObjects",
+  "description": "Organização de testes utilizando PageObjects",
   "main": "index.js",
   "scripts": {
     "test": "npx cypress run"
