@@ -2,65 +2,21 @@
 
 class EnderecoPage {
 
-    get #cadEndereco() {
-        return cy.get(".woocommerce-MyAccount-navigation-link--edit-address > a")
-    }
-
-    get #billing(){
-        return cy.get(":nth-child(1) > .title > .edit")
-    }
-
-    get #nome(){
-        return cy.get("#billing_first_name")
-    }
-
-    get #sobrenome(){
-        return cy.get("#billing_last_name")
-    }
-
-    get #empresa(){
-        return cy.get("#billing_company")
-    }
-
-    get #pais(){
-        return cy.get("#select2-billing_country-container")
-    }
-
-    get #endereco(){
-        return cy.get("#billing_address_1")
-    }
-
-    get #numero(){
-        return cy.get("#billing_address_2")
-    }
-
-    get #cidade(){
-        return cy.get("#billing_city")
-    }
-
-    get #estado(){
-        return cy.get("#select2-billing_state-container")
-    }
-
-    get #cep(){
-        return cy.get("#billing_postcode")
-    }
-
-    get #phone(){
-        return cy.get("#billing_phone")
-    }
-
-    get #email(){
-        return cy.get("#billing_email")
-    }
-
-    get #salvar(){
-        return cy.get(".button")
-    }
-
-    get mensagem(){
-        return cy.get(".woocommerce-message")
-    }
+    get #cadEndereco() {return cy.get(".woocommerce-MyAccount-navigation-link--edit-address > a")}
+    get #billing(){return cy.get(":nth-child(1) > .title > .edit")}
+    get #nome(){return cy.get("#billing_first_name")}
+    get #sobrenome(){return cy.get("#billing_last_name")}
+    get #empresa(){return cy.get("#billing_company")}
+    get #pais(){return cy.get("#select2-billing_country-container")}
+    get #endereco(){return cy.get("#billing_address_1")}
+    get #numero(){return cy.get("#billing_address_2")}
+    get #cidade(){return cy.get("#billing_city")}
+    get #estado(){return cy.get("#select2-billing_state-container")}
+    get #cep(){return cy.get("#billing_postcode")}
+    get #phone(){return cy.get("#billing_phone")}
+    get #email(){return cy.get("#billing_email")}
+    get #salvar(){return cy.get(".button")}
+    get mensagem(){return cy.get(".woocommerce-message")}
     
     endereco(nome, sobrenome, empresa, pais, endereco, numero, cidade, estado, cep, telefone, email){        
         this.#cadEndereco.click()
